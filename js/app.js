@@ -3,7 +3,7 @@
  */
 let cards = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf", "fa fa-bicycle", "fa fa-bomb",
             "fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf", "fa fa-bicycle", "fa fa-bomb"]
-
+const stars = document.querySelector('.stars')
 /*
  * 显示页面上的卡片
  *   - 使用下面提供的 "shuffle" 方法对数组中的卡片进行洗牌
@@ -37,3 +37,8 @@ function shuffle(array) {
  *    + 增加移动计数器并将其显示在页面上（将这个功能放在你从这个函数中调用的另一个函数中）
  *    + 如果所有卡都匹配，则显示带有最终分数的消息（将这个功能放在你从这个函数中调用的另一个函数中）
  */
+let tiles = document.querySelectorAll('li.card').forEach(function (card) {
+    card.addEventListener('click', function (eve) {
+        card.classList.add('open', 'show');
+    })
+})
