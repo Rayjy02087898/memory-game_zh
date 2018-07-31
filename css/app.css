@@ -113,18 +113,65 @@ h1 {
 
 /*
  * 响应
- */
-@media screen and (min-width: 600px) {
+ *
+@media screen and (max
     .container {
-        width: 100%;
-        height: 100%; 
+            width: 100%;
+            height: 100%;
     }
     .deck {
         width: 80%;
         height: 100%;
     }
+}
+*/
+
+@media screen and (max-width: 800px) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+    .deck {
+        width: 80%;
+        height: 80%;
+        min-height: 80%;
+    }
     .deck .card {
-        width: 24%;
-        height: 24%;
+        width: 21%;
+        height: 22%;
+        margin: 5px;
+    }
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+    .score-panel {
+        width: 60%;
+    }
+    .deck .card.show {
+        font-size: 2em;
+    }
+    .deck .card.match {
+        font-size: 2em;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .deck .card {
+        width: 23%;
+        height: 19%;
+        margin: 1px;
+    }
+    .deck .card.show {
+        font-size: 1em;
+    }
+
+    .deck .card.match {
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 1em;
+        margin-top: 100px;
     }
 }
