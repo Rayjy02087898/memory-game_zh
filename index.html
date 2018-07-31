@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Matching Game</title>
     <meta name="description" content="">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -30,7 +31,7 @@
 
         	<span class="moves">0</span> Moves
 
-            <div class="restart">
+            <div class="restart" id="restart">
         		<i class="fa fa-repeat"></i>
         	</div>
         </section>
@@ -85,6 +86,17 @@
                 <i class="fa fa-cube"></i>
             </li>
         </ul>
+    </div>
+    <div class="lightbox" id="text">
+    <div class="box">
+    <a class="close" href="#">X</a>
+        <p class="title">
+            'CONGRADULATIONS! YOU WON!'
+        </p>
+        <div class="content">
+        </div>
+        <button class="gameStar">restart!</button>
+    </div>
     </div>
 
     <script src="js/app.js"></script>
