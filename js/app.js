@@ -16,13 +16,13 @@ let moves = 0;
 
 let match = 0;
 
-//move counter
+/* @description 计算moves*/
 function addMoves() {
     moves++;
     document.querySelector('.moves').innerHTML = moves;
 }
 
-// star rating function
+/* @description 计算星*/
 function rating() {
     if (moves  <= 12) {
         stars.innerHTML = '<li><i class="fa fa-star"></i></li> ' + '<li><i class="fa fa-star"></i></li>';
@@ -36,12 +36,12 @@ function rating() {
     }
 }
 
-//MATCH num
+/* @description 计算匹配数*/
 function matchCounter() {
     match++;
 }
 
-//结束画面
+/* @description 结束框体*/
 function end() {
     if (match === 8) {
         stopCount();
@@ -87,14 +87,14 @@ function shuffle(array) {
  */
 
 
-// shuffle
+/* @description 洗牌*/
 function shuffleCard() {
     cards = shuffle(cards);
 }
 
 let opened = [];
 
-//监听点击
+/* @description 监听卡片点击*/
 deck.addEventListener("click", function (e) {
         let event = e || window.event;
         let target = event.target || event.srcElement;
@@ -105,7 +105,7 @@ deck.addEventListener("click", function (e) {
         }
 })
 
-//检查卡片
+/* @description 检查卡片匹配*/
 function checkcard() {
         if (opened.length === 2) {
             let firstCard = opened[0];
@@ -131,7 +131,7 @@ function checkcard() {
         }
 }
 
-//计时器
+/* @description 计时器*/
 var c = 0
 var t
 
@@ -144,6 +144,7 @@ function stopCount() {
     clearTimeout(t);
 }
 
+/* @description 重置*/
 function restart() {
     shuffleCard();
     match = 0;
@@ -159,12 +160,11 @@ function restart() {
         card.querySelector('i').className = cards[index];
     })
 }
-//RESTART
+
+/* @description 监听按键点击*/
 document.querySelector('.close').addEventListener('click', function() {
     box.style.display = 'none';
 })
-
-
 
 document.querySelector('.restart').addEventListener('click', function() {
     restart();
