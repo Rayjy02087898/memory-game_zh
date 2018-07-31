@@ -151,3 +151,5 @@ document.querySelector('.restart').addEventListener('click', function restart() 
         card.querySelector('i').className = cards[index];
     })
 })
+
+//github https://github.com/Rayjy02087898/memory-game_zh.git
