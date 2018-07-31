@@ -110,7 +110,7 @@ document.querySelectorAll('li.card').forEach(function (card) {
 
 //检查卡片
 
-function checkcard () {
+function checkcard() {
         if (opened.length === 2) {
             let firstCard = opened[0];
             let secondCard = opened[1];
